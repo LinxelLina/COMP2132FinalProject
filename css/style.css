@@ -30,7 +30,7 @@ header {
 }
 #popup #popup_correct, #popup #popup_fail {
   position: fixed;
-  top: 81%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px;
@@ -109,6 +109,7 @@ h1 {
   font-size: 20px;
   margin-bottom: 5px;
   font-weight: bold;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -125,6 +126,12 @@ h1 img {
   height: 50px;
 }
 
+#keyboard {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
 .keyboard_keys {
   width: 35px;
   height: 35px;
@@ -138,6 +145,11 @@ h1 img {
   background-color: #767b91;
 }
 
+@media screen and (max-height: 755px) {
+  #popup #popup_correct, #popup #popup_fail {
+    top: 81%;
+  }
+}
 @media screen and (max-width: 430px) {
   h1 {
     font-size: 30px;

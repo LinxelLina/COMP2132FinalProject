@@ -1,22 +1,42 @@
 [
     {
-        "word":"Simply",
-        "hint":"simple"
+        "word":"ethics",
+        "hint":"deciding what is morally right and wrong in computing -- and in life"
     },
     {
-        "word":"Tester",
-        "hint":"a test"
+        "word":"media",
+        "hint":"mobiles, ipads, laptops, television, newspapers, facebook, instagram..."
     },
     {
-        "word":"No",
-        "hint":"no"
+        "word":"privacy",
+        "hint":"keeping yourself and your personal information data safe when off and online"
     },
     {
-        "word":"What",
-        "hint":"why"
+        "word":"teamwork",
+        "hint":"working together cooperatively, pulling together, turning a group into a team"
     },
     {
-        "word":"sample",
-        "hint":"sample"
+        "word":"communication",
+        "hint":"one of the 5 control structures in programming, where a program requires to exchange information with the outside world, sometimes called input/output (I/O)"
+    },
+    {
+        "word":"integer",
+        "hint":"a data type in programming languages, representing a whole number positive or negative"
+    },
+    {
+        "word":"interpreter",
+        "hint":"is a program that executes a high-level language program, usually a script language, an instruction at a time."
+    },
+    {
+        "word":"template",
+        "hint":"something that establishes or serves as a pattern"
+    },
+    {
+        "word":"decimal",
+        "hint":"numbers expressed in the base of 10, using 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 only"
+    },
+    {
+        "word":"perseverance",
+        "hint":"sticking at it, hanging in there; important for programming -- and for living"
     }
 ]

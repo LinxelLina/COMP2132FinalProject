@@ -49,7 +49,7 @@ header{
 	font-size:.85em;
 	#popup_correct,#popup_fail{
 		position:fixed;
-		top:81%;
+		top:60%;
 		left:50%;
 		transform: translate(-50%, -50%);
 		padding:15px;
@@ -130,6 +130,7 @@ h1{
 		font-size: 20px;
 		margin-bottom:5px;
 		font-weight: bold;
+		text-align: center;
 		@include center-screen(auto,auto,fit-content);
 	}
 }
@@ -144,6 +145,10 @@ h1{
 	}
 }
 
+#keyboard{
+	@include center-screen(auto,auto,fit-content);
+}
+
 .keyboard_keys{
 	width:35px;
 	height:35px;
@@ -154,6 +159,13 @@ h1{
 }
 .keyboard_keys:hover{
 	background-color: $key-hover;
+}
+@media screen and (max-height:755px) {
+	#popup{
+		#popup_correct,#popup_fail{	
+			top:81%;
+		}
+	}
 }
 
 @media screen and (max-width:430px){

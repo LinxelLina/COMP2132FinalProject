@@ -179,6 +179,10 @@ class Word{ //custom object
         actualWord = word.split("");
     }
 
+    getWord(){
+        return this.word;
+    }
+
     displayNew(){ //creates and shows the beginning of the hangman
         let boxes = `<p>`;
         for(let i = 0; i < this.wordSize;i++){
@@ -258,8 +262,9 @@ function animateEnd(){
         | ${goodscpArrayDescription[randomscpgood]}</p>`;
     }else{
         src         = `bad-${badscpArrayName[randomscpbad]}`;
-        popup_html  = `<p><a href="${badscpArrayLink[randomscpbad]}" target="_blank">${badscpArrayName[randomscpbad].toUpperCase()}</a> 
-        | ${badscpArrayDescription[randomscpbad]}</p>`;
+        popup_html  = `<p>The word was: ${word.getWord()}</p>
+                        <p><a href="${badscpArrayLink[randomscpbad]}" target="_blank">${badscpArrayName[randomscpbad].toUpperCase()}</a> 
+                        | ${badscpArrayDescription[randomscpbad]}</p>`;
         door        = `-bad`;
     }
 
