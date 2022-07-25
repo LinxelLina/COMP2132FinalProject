@@ -1,0 +1,234 @@
+html {
+  box-sizing: border-box;
+  font-family: "Century Gothic";
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(rgb(161, 161, 161) 6%, rgb(125, 125, 125) 43%, rgb(70, 70, 70) 100%);
+  background-attachment: fixed;
+  border: black 5px solid;
+}
+
+header {
+  border-bottom: black 5px solid;
+  padding-bottom: 10px;
+}
+
+#popup {
+  /* remove this popup from normal page flow */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* fill the entire viewport */
+  width: 100vw;
+  height: 100vh;
+  /* ensure it is over-top all other page elements */
+  z-index: 1000;
+  /* transparency allows user to see content behind */
+  font-size: 0.85em;
+}
+#popup #popup_correct, #popup #popup_fail {
+  position: fixed;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+#popup #popup_correct p, #popup #popup_fail p {
+  font-family: "Century Gothic", cursive;
+}
+#popup #popup_correct button, #popup #popup_fail button {
+  border-radius: 5px;
+  border: 3px solid;
+  font-weight: bold;
+  background-color: #E9ECEF;
+}
+#popup #popup_correct .extraText p a, #popup #popup_fail .extraText p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #495057;
+}
+#popup #popup_correct .extraText p a:hover, #popup #popup_fail .extraText p a:hover {
+  color: #F8F9FA;
+}
+#popup #popup_correct {
+  background-color: #7da182;
+  border: 5px solid #415d43;
+}
+#popup #popup_correct button {
+  border-color: #415d43;
+}
+#popup #popup_correct button:hover {
+  background-color: #375139;
+}
+#popup #popup_fail {
+  background-color: #ff5e5e;
+  border: 5px solid #6b0806;
+}
+#popup #popup_fail button {
+  border-color: #6b0806;
+}
+#popup #popup_fail button:hover {
+  background-color: #d20703;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hangman_pic {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+#hangman_pic #hangPic {
+  height: 400px;
+  width: 400px;
+}
+
+#hangman p {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 0px;
+}
+
+#hint p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+h1 img {
+  width: 50px;
+  height: 50px;
+}
+
+.keyboard_keys {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #c7ccdb;
+  font-weight: bold;
+}
+
+.keyboard_keys:hover {
+  background-color: #767b91;
+}
+
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 30px;
+  }
+  #popup #popup_correct, #popup #popup_fail {
+    padding: 0px;
+    width: 80vw;
+  }
+  #hangman_pic #hangPic {
+    height: 200px;
+    width: 200px;
+  }
+  #hint p {
+    font-size: 15px;
+  }
+  .keyboard_keys {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 224px) {
+  h1 {
+    flex-direction: column;
+  }
+  #popup #popup_correct p, #popup #popup_fail p {
+    font-size: 10px;
+  }
+  #popup #popup_correct button, #popup #popup_fail button {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 200px) {
+  h1 {
+    font-size: 15px;
+  }
+  #hangman_pic #hangPic {
+    height: 100px;
+    width: 100px;
+  }
+  #hangman p {
+    font-size: 12px;
+  }
+  #hint p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 115px) {
+  body {
+    border-width: 1px;
+  }
+  header {
+    border-width: 1px;
+  }
+  h1 {
+    font-size: 5px;
+  }
+  h1 img {
+    height: 10px;
+    width: 10px;
+  }
+  #popup #popup_correct, #popup #popup_fail {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #popup #popup_correct p, #popup #popup_fail p {
+    font-size: 5px;
+  }
+  #popup #popup_correct button, #popup #popup_fail button {
+    font-size: 5px;
+  }
+  #hangman p {
+    font-size: 5px;
+  }
+  #hint p {
+    font-size: 5px;
+  }
+  #hangman_pic #hangPic {
+    height: 40px;
+    width: 40px;
+  }
+  .keyboard_keys {
+    width: 12px;
+    height: 12px;
+    font-size: 6px;
+    margin: 1px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12px;
+  }
+}

@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+//set colours
+$background: linear-gradient(rgba(161,161,161,1) 6%, rgba(125,125,125,1) 43%, rgba(70,70,70,1) 100%);
+$correct: #7da182;
+$correct-border:#415d43;
+$correct-hover:#375139;
+$fail: #ff5e5e;
+$fail-border:#6b0806;
+$fail-hover: #d20703;
+$key-color:#c7ccdb;
+$key-hover:#767b91;
+$border:black;
+$link-color: #495057;
+$link-hover: #F8F9FA;
+$button-background: #E9ECEF;
+
+@mixin center-screen($left,$right,$width){
+	margin-left:$left;
+	margin-right:$right;
+	width:$width;
+}
+html{
+	box-sizing: border-box;
+	font-family: 'Century Gothic';
+	height:100vh;
+}
+
+body{
+	background: $background;
+	background-attachment: fixed;
+	border: $border 5px solid;  
+}
+header{
+	border-bottom: $border 5px solid;
+	padding-bottom:10px;
+}
+#popup{
+	/* remove this popup from normal page flow */
+    position:fixed;
+    top:0px;
+    left:0px;    
+	/* fill the entire viewport */
+    width:100vw;
+    height:100vh;    
+	/* ensure it is over-top all other page elements */
+	z-index:1000;
+	/* transparency allows user to see content behind */
+	font-size:.85em;
+	#popup_correct,#popup_fail{
+		position:fixed;
+		top:81%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		padding:15px;
+		text-align: center;
+		border-radius: 8px;
+		p{
+			font-family: 'Century Gothic',cursive;
+		}
+		button{
+			border-radius: 5px;
+			border: 3px solid;
+			font-weight: bold;
+			background-color: $button-background;
+		}
+		.extraText{
+			p{
+				a{
+					text-decoration: none;
+					font-weight: bold;
+					color: $link-color;
+				}
+				a:hover{
+					color:$link-hover;
+				}
+			}
+		}
+	}
+	#popup_correct{
+		background-color: $correct;
+		border:5px solid $correct-border;
+		button{
+			border-color:$correct-border;
+		}
+		button:hover{
+			background-color: $correct-hover;
+		}
+	}
+	#popup_fail{
+		background-color: $fail;
+		border:5px solid $fail-border;
+		button{
+			border-color: $fail-border;
+		}
+		button:hover{
+			background-color: $fail-hover;
+		}
+	}
+}
+
+h1{
+	@include center-screen(auto,auto,fit-content);
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#hangman_pic{
+	@include center-screen(auto,auto,fit-content);
+	#hangPic{
+		height:400px;
+		width:400px;
+	}
+}
+
+#hangman{
+	p{
+		font-size: 30px;
+		font-weight: bold;
+		@include center-screen(auto,auto,fit-content);
+		margin-top:0px;
+	}
+}
+
+#hint{
+	p{
+		font-size: 20px;
+		margin-bottom:5px;
+		font-weight: bold;
+		@include center-screen(auto,auto,fit-content);
+	}
+}
+main{
+	@include center-screen(auto,auto,fit-content);
+}
+
+h1{
+	img{
+		width:50px;
+		height:50px;
+	}
+}
+
+.keyboard_keys{
+	width:35px;
+	height:35px;
+	margin:5px;
+	border-radius: 5px;
+	background-color: $key-color;
+	font-weight: bold;
+}
+.keyboard_keys:hover{
+	background-color: $key-hover;
+}
+
+@media screen and (max-width:430px){
+	h1{
+		font-size: 30px;
+	}
+	#popup{
+		#popup_correct,#popup_fail{
+			padding:0px;
+			width:80vw;
+		}
+	}
+	#hangman_pic{
+		#hangPic{
+			height:200px;
+			width:200px;
+		}
+	}
+	#hint{
+		p{
+			font-size: 15px;
+		}
+	}
+	.keyboard_keys{
+		width:20px;
+		height:20px;
+		text-align: center;
+		padding:0px;
+	}
+}
+
+@media screen and (max-width:224px){
+	h1{
+		flex-direction: column;
+	}
+	#popup{
+		#popup_correct,#popup_fail{
+			p{
+				font-size:10px;
+			}
+			button{
+				font-size:10px;
+			}
+		}
+	}
+}
+@media screen and (max-width:200px){
+	h1{
+		font-size: 15px;
+	}
+	#hangman_pic{
+		#hangPic{
+			height:100px;
+			width:100px;
+		}
+	}
+	#hangman{
+		p{
+			font-size: 12px;
+		}
+	}
+	#hint{
+		p{
+			font-size: 10px;
+		}
+	}
+}
+
+@media screen and (max-width:115px){
+	body{
+		border-width: 1px; 
+	}
+	header{
+		border-width: 1px;
+	}
+	h1{
+		font-size: 5px;
+		img{
+			height:10px;
+			width:10px;
+		}
+	}
+	#popup{
+		#popup_correct,#popup_fail{	
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			p{
+				font-size:5px;
+			}
+			button{
+				font-size:5px;
+			}
+		}
+	}
+	#hangman{
+		p{
+			font-size: 5px;
+		}
+	}
+	#hint{
+		p{
+			font-size: 5px;
+		}
+	}
+	#hangman_pic{
+		#hangPic{
+			height:40px;
+			width:40px;
+		}
+	}
+	.keyboard_keys{
+		width:12px;
+		height:12px;
+		font-size: 6px;
+		margin:1px;
+		text-align: center;
+		@include center-screen(auto,auto,12px);
+	}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <title>Final Project | Hangman</title>
+
+   <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="javascript/finalProject.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <header>
+        <h1>COMP2132 Final Project: SCP Hangman <img src="images/logo.png" alt="SCP LOGO"></h1>
+    </header>
+
+    <main>
+        <div id = "popup">
+            <div id="popup_correct">
+                <p>Congradulations! You solved the word.</p>
+                <div class="extraText">
+                    <p>Generating from JS</p>
+                </div>
+                <button class="restart">Play Again</button>
+            </div>
+            <div id="popup_fail">
+                <p>Dang. You did not solve the word.</p>
+                <div class="extraText">
+                    <p>Generating from JS</p>
+                </div>
+                <button class="restart">Play Again</button>
+            </div>
+        </div>
+        <div id="hangman_pic">
+            <img src="images/door-01.png" alt="door-01" id="hangPic">
+        </div>
+        <div id="hangman">
+            <p>Loading from js...</p>  
+        </div>
+        <div id="hint">
+            <p>Loading from js....</p>
+        </div>
+        <div id="keyboard">
+            <p>Loading from js...</p>
+        </div>
+    </main>
+</body>
+</html>
